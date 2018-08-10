@@ -1,11 +1,11 @@
 <script type="text/javascript">
-  RED.nodes.regiterType('infrared',{
+  RED.nodes.registerType('infrared',{
     category: 'input',
     color: '#89c3eb',
     defaults:{
       name: {value:""},
       pin {value:"",required:true,validate:RED.validators.number()},
-      set: {value:""},
+      set: {value:""}
     },
     inputs:1,
     outputs:0,
@@ -17,9 +17,9 @@
   </script>
 
   <script type="text/x-red" data-template-name="infrared">
-    <div> class="form-row">
-      <label for="node-input-name"><i class="fa fa-circle"></li> <span>Port</span></label>
-      <input type="text" id="node-input-name" style="width: 250px;">
+    <div class="form-row">
+      <label for="node-input-pin"><i class="fa fa-circle"></i> <span>Port</span></label>
+      <select type="text" id="node-input-pin" style="width: 250px;">
           <option value="2">Digital 2</option>
           <option value="3">Digital 3</option>
           <option value="4">Digital 4</option>
@@ -34,7 +34,7 @@
       <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> <span>Name</span></label>
         <input type="text" id="node-input-name">
-      <div>
+      </div>
    </script>
 
    <script type="text/x-red" data-help-name="infrared">
