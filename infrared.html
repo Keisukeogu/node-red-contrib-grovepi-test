@@ -1,0 +1,42 @@
+<script type="text/javascript">
+  RED.nodes.regiterType('infrared',{
+    category: 'input',
+    color: '#89c3eb',
+    defaults:{
+      name: {value:""},
+      pin {value:"",required:true,validate:RED.validators.number()},
+      set: {value:""},
+    },
+    inputs:1,
+    outputs:0,
+    icon: "serial.png",
+    label: function(){
+      return this.name||"infrared";
+    },
+  });
+  </script>
+
+  <script type="text/x-red" data-template-name="infrared">
+    <div> class="form-row">
+      <label for="node-input-name"><i class="fa fa-circle"></li> <span>Port</span></label>
+      <input type="text" id="node-input-name" style="width: 250px;">
+          <option value="2">Digital 2</option>
+          <option value="3">Digital 3</option>
+          <option value="4">Digital 4</option>
+          <option value="5">Digital 5</option>
+          <option value="6">Digital 6</option>
+          <option value="7">Digital 7</option>
+          <option value="8">Digital 8</option>
+        </select>
+        &nbsp;<span id="pitype"></span>
+      </div>
+      <br/>
+      <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span>Name</span></label>
+        <input type="text" id="node-input-name">
+      <div>
+   </script>
+
+   <script type="text/x-red" data-help-name="infrared">
+      <p>A simple node that converts the message payloads into all infrared characters</p>
+   </script>
