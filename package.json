@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "test fo grovepi",
   "dependencies": {
-    "node-grovepi": "2.2.2"
+    "node-grovepi": "2.1.1"
   },
   "main": "infrared.js",
   "scripts": {
